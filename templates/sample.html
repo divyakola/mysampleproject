@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body bgcolor="powderblue">
+<h1>{{msg|title}}</h1>
+<h1>{{msg|length}}</h1>
+<h1>{{msg|wordcount}}</h1>
+<h1>{{msg|upper}}</h1>
+<h1>{{msg|cut:" "}}</h1>
+<h1>{{msg|truncatewords:"2"}}</h1>
+<h1>{{msg|truncatechars:"10"}}</h1>
+<h1>{{msg|capfirst}}</h1>
+<hr>
+<h1>
+{% for rec in emp %}
+      <p>{{ rec }}</p>
+{% endfor %} 
+</h1>
+<hr>
+<h1>{{ number|divisibleby:'3'}}</h1>
+<hr>
+{% for w in words %}
+    {% if w|length_is:"4" %}
+	<h1><p>{{w}}</p><h1>
+    {% endif %}
+     
+{% endfor %}
+</body>
+</html>
